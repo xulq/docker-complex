@@ -18,3 +18,15 @@ after_success:
   - docker push xulq/docker-complex-nginx
   - docker push xulq/docker-complex-server
   - docker push xulq/docker-complex-worker
+deploy:
+  edge: true
+  provider: elasticbeanstalk
+  regoin: ap-northeast-1
+  app: xulq-docker-complex
+  env:  DockerComplex-env
+  bucket_name: elasticbeanstalk-ap-northeast-1-250378445687
+  bucket_patch: xulq-docker-complex
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
