@@ -22,7 +22,7 @@ deploy:
   edge: true
   provider: elasticbeanstalk
   regoin: ap-northeast-1
-  app: xulq-docker-complex
+  app: docker-complex
   env:  DockerComplex-env
   bucket_name: elasticbeanstalk-ap-northeast-1-250378445687
   bucket_patch: xulq-docker-complex
